@@ -1,8 +1,3 @@
-@import './styles/_vars.scss';
-@import './styles/_fonts.scss';
-@import './styles/_header.scss';
-@import './styles/_logo.scss';
-
 * {
   box-sizing: border-box;
   text-decoration: none;
@@ -15,8 +10,15 @@ html {
 .container {
   width: 100%;
   &-content {
-    max-width: 1060px;
+    max-width: 1160px;
     width: 100%;
     margin: 0 auto;
   }
 }
+
+@import '../../assets/styles/vars';
+@import '../../assets/styles/_fonts.scss';
+@import '../../assets/styles/_header.scss';
+@import '../../assets/styles/_logo.scss';
+@import './styles/_watch.scss';
+@import '../../assets/styles/_btn.scss';
