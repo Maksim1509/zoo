@@ -1,4 +1,7 @@
+@import './styles/_vars.scss';
 @import './styles/_fonts.scss';
+@import './styles/_header.scss';
+@import './styles/_logo.scss';
 
 * {
   box-sizing: border-box;
@@ -7,4 +10,13 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  &-content {
+    max-width: 1060px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }

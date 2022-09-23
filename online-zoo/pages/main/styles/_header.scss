@@ -1,0 +1,44 @@
+.header {
+  height: 80px;
+  padding: 14px 0;
+  background-color: #000000;
+  backdrop-filter: blur(2px);
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__nav {
+    width: 100%;
+    margin-left: 63px;
+  }
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  &__item {
+    margin-right: 58px;
+  }
+  &__item:last-child {
+    margin: 0;
+    margin-left: auto;
+  }
+  &__link {
+    font: {
+      family: 'Roboto';
+      style: normal;;
+      weight: 500;;
+      size: 16px;
+    }
+    line-height: 22px;
+    color: #FFFFFF;
+    transition: 0.3s;
+    &_active {
+      color: $orange;
+    }
+  }
+  &__link:hover {
+    color: $orange;
+  }
+}
