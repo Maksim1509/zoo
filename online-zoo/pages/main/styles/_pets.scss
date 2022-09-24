@@ -112,6 +112,11 @@
     height: 366px;
     border-radius: 5px 5px 0 0;
     object-fit: cover;
+    transition: 0.3s;
+  }
+
+  &__desc {
+    transition: 0.5s;
   }
 
   &__title {
@@ -162,5 +167,15 @@
         background: url('../../assets/icons/banana.svg') center center no-repeat;
       }
     }
+  }
+  &:hover &__img {
+    z-index: 1;
+    transform: scale(102.73%);
+    filter: brightness(0.7);
+  }
+  &:hover &__desc {
+    color: #FFFFFF;
+    z-index: 1;
+    transform: translateY(-200px);
   }
 }

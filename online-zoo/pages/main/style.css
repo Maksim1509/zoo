@@ -457,6 +457,13 @@ html {
   border-radius: 5px 5px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.pet-card__desc {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .pet-card__title {
@@ -505,5 +512,20 @@ html {
   left: 0;
   top: 0;
   background: url("../../assets/icons/banana.svg") center center no-repeat;
+}
+
+.pet-card:hover .pet-card__img {
+  z-index: 1;
+  -webkit-transform: scale(102.73%);
+          transform: scale(102.73%);
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+}
+
+.pet-card:hover .pet-card__desc {
+  color: #FFFFFF;
+  z-index: 1;
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
 }
 /*# sourceMappingURL=style.css.map */
