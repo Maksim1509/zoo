@@ -17,8 +17,10 @@ html {
 }
 
 @import '../../assets/styles/vars';
+@import '../../assets/styles/mixins';
 @import '../../assets/styles/_fonts.scss';
 @import '../../assets/styles/_header.scss';
 @import '../../assets/styles/_logo.scss';
 @import './styles/_watch.scss';
 @import '../../assets/styles/_btn.scss';
+@import './styles/_backstage.scss';
