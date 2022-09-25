@@ -28,7 +28,7 @@
     opacity: 0;
     width: 298px;
     height: 54px;
-    border-radius: 25px;
+    border-radius: inherit;
     border: none;
     background: #E47209;
     transition: opacity 0.3s;
@@ -45,7 +45,7 @@
     opacity: 0;
     width: 298px;
     height: 54px;
-    border-radius: 25px;
+    border-radius: inherit;
     border: none;
     transition: opacity 0.3s;
     background: #4B9200;
@@ -55,5 +55,8 @@
   }
   &_disabled {
     background: #767474;
+  }
+  &_square {
+    border-radius: 5px;
   }
 }

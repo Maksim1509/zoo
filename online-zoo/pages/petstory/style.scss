@@ -4,6 +4,8 @@
 }
 
 html {
+  font-family: 'Roboto';
+  font-style: normal;
   scroll-behavior: smooth;
 }
 
@@ -26,3 +28,4 @@ html {
 @import './styles/_backstage.scss';
 @import './styles/_pets.scss';
 @import './styles/_pick.scss';
+@import './styles/_testimonials.scss';
