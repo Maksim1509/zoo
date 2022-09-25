@@ -1,0 +1,130 @@
+@mixin widjet-icon($icon) {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../../assets/icons/#{$icon}') center center no-repeat;
+}
+
+.pick {
+  width: 100%;
+  padding: 69px 0 100px;
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  opacity: 0.9;
+  font: {
+    family: 'Roboto';
+    style: normal;
+  }
+  color: #333B41;
+
+  &__content {
+    width: 1160px;
+    padding: 41px 0 59px 99px;
+    background: rgba(253, 253, 255, 0.52);
+    backdrop-filter: blur(2px);    
+    border-radius: 20px;
+  }
+
+  &__title {
+    margin: 0;
+    font: {
+      weight: 400;
+      size: 48px;
+    }
+    line-height: 58px;
+    text-align: center;
+    color: #FE9013;
+  }
+
+  &__subtitle {
+    margin: 30px 0 40px;
+    @include subtitle;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    max-width: 863px;
+    &_strong {
+      display: block;
+      max-width: none;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    &_link {
+      position: relative;
+      text-decoration: none;
+      color: #333B41;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        width: 100%;
+        height: 1px;
+        background: #FE9013;
+      }
+    }
+  }
+
+  &__widjet-wrap {
+    max-width: 916px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+  }
+
+}
+
+.widjet {
+  width: 168px;
+  height: 244px;  
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px;
+
+  &__title {
+    width: 100%;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 47px;
+    text-align: center;
+  }
+
+  &__icon {
+    position: relative;
+    width: 168px;
+    height: 168px; 
+    background: #FFFFFF;
+    border: 1px solid #FE9013;
+    border-radius: 5px;
+  }
+  &_pay::before {
+    @include widjet-icon('pay.svg');
+  }
+  &_zoo::before {
+    @include widjet-icon('zoo.svg');
+  }
+  &_monkey::before {
+    @include widjet-icon('monkey.svg');
+  }
+
+  &__text {
+    margin: 30px 0 0;
+  }
+  
+  &__arrow {
+    width: 69px;
+    height: 35.08px;
+    background: url(../../assets/icons/widjet-arrow.svg) center center no-repeat;
+    background-size: contain;
+    align-self: start;
+    margin-top: 61px;
+  }
+
+  &__btn {
+    margin-top: 60px;
+  }
+}
