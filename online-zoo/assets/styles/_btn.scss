@@ -58,5 +58,19 @@
   }
   &_square {
     border-radius: 5px;
-  }
+  } 
+}
+
+.btn-submit {
+  width: 129px;
+  height: 42px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  background: #F1F3F2;
+
+  border: 1px solid #333B41;
+  border-radius: 5px;
+  cursor: pointer;
 }
