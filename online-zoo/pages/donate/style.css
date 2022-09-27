@@ -682,7 +682,7 @@ html {
   height: 20px;
   right: 10px;
   top: 17px;
-  background: url(../../../assets/icons/donate/dollar-icon-gray.svg);
+  background: url(../../assets/icons/donate/dollar-icon-gray.svg);
 }
 
 .donate-pick {
@@ -762,13 +762,13 @@ html {
   width: 14px;
   height: 14px;
   margin: 0 64px 0 11px;
-  background: url(../../../assets/icons/donate/x-icon.svg);
+  background: url(../../assets/icons/donate/x-icon.svg);
 }
 
 .donate-pick__panda {
   width: 270px;
   height: 198.5px;
-  background: url(../../../assets/icons/donate/panda_widget.svg) 0 100%;
+  background: url(../../assets/icons/donate/panda_widget.svg) 0 100%;
 }
 
 .bar {
@@ -825,7 +825,7 @@ html {
   height: 40px;
   left: -15px;
   top: -15px;
-  background: url(../../../assets/icons/donate/ring2.svg) no-repeat;
+  background: url(../../assets/icons/donate/ring2.svg) no-repeat;
   cursor: pointer;
 }
 
@@ -836,7 +836,7 @@ html {
   height: 22.95px;
   left: -7.5px;
   top: -7.5px;
-  background: url(../../../assets/icons/donate/ring1.svg);
+  background: url(../../assets/icons/donate/ring1.svg);
   cursor: pointer;
 }
 
@@ -867,11 +867,11 @@ html {
   margin-right: 2px;
   width: 10px;
   height: 20px;
-  background: url(../../../assets/icons/donate/dollar-icon.svg);
+  background: url(../../assets/icons/donate/dollar-icon.svg);
 }
 
 .price__dollar_active {
-  background: url(../../../assets/icons/donate/dollar-icon_or.svg);
+  background: url(../../assets/icons/donate/dollar-icon_or.svg);
 }
 
 .price__count_active {
