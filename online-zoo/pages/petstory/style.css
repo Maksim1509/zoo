@@ -762,14 +762,13 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 21px;
 }
 
 .testimonials__scrol {
   position: relative;
   width: 599px;
   height: 8px;
-  margin: 21px 0 31px;
+  margin: 21px 0 34px;
   background: #F5F7F6;
   border-radius: 5px;
   cursor: pointer;
@@ -810,7 +809,7 @@ html {
   bottom: 0;
   width: 160px;
   height: 235px;
-  background: url(../../../assets/images/leav.png) -105px -40px no-repeat;
+  background: url(../../assets/images/leav.png) -86px -40px no-repeat;
 }
 
 .testimonial {
@@ -827,7 +826,7 @@ html {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 15px 15px 19px 16px;
+  padding: 15px 11px 19px 16px;
   border-radius: 20px;
 }
 
@@ -951,6 +950,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 40px 0 50px;
 }
 
@@ -962,6 +964,7 @@ html {
 .footer__center {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  margin-left: 69px;
 }
 
 .footer__right {
@@ -1178,6 +1181,8 @@ html {
   list-style: none;
   row-gap: 10px;
   padding: 0;
+  margin: 0;
+  margin-top: 1px;
 }
 
 .socials__link {
