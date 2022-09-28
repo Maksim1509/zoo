@@ -536,7 +536,7 @@ html {
 }
 
 .panda {
-  margin-top: 80px;
+  margin-top: 76px;
   width: 100%;
 }
 
@@ -562,13 +562,16 @@ html {
 }
 
 .donate__title {
+  font-weight: 400;
   font-size: 36px;
   line-height: 47px;
   color: #FFFFFF;
+  margin: 0;
 }
 
 .donate__text {
-  margin: 10px 0 40px;
+  margin: 10px 0 46px;
+  font-weight: 500;
   font-size: 16px;
   line-height: 22px;
   color: #FFFFFF;
@@ -579,6 +582,7 @@ html {
   font-size: 36px;
   line-height: 47px;
   color: #FE9013;
+  margin-top: 0;
   margin-bottom: 60px;
 }
 
@@ -592,11 +596,10 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-column-gap: 53px;
+          column-gap: 53px;
   width: 218px;
-  margin-bottom: 47px;
+  margin-bottom: 30px;
 }
 
 .donate__share {
@@ -713,6 +716,7 @@ html {
 
 .donate-pick__title {
   margin: 0;
+  margin-right: 12px;
   font-weight: 400;
   font-size: 48px;
   line-height: 58px;
@@ -721,7 +725,9 @@ html {
 }
 
 .donate-pick__desc {
-  margin: 20px 0 60px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 20px 0 112px;
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
@@ -735,6 +741,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 43px;
 }
 
 .donate-pick__days {
@@ -763,19 +770,20 @@ html {
   line-height: 22px;
   text-align: center;
   color: #333B41;
+  text-transform: none;
 }
 
 .donate-pick__x {
   width: 14px;
   height: 14px;
-  margin: 0 64px 0 11px;
+  margin: 0 64px 27px 11px;
   background: url(../../assets/icons/donate/x-icon.svg);
 }
 
 .donate-pick__panda {
-  width: 270px;
-  height: 198.5px;
-  background: url(../../assets/icons/donate/panda_widget.svg) 0 100%;
+  width: 295px;
+  height: 200px;
+  background: url(../../assets/icons/donate/panda_widget.svg) 0 -47px no-repeat;
 }
 
 .bar {
@@ -898,7 +906,7 @@ html {
 }
 
 .price:nth-child(7) {
-  margin-right: 88px;
+  margin-right: 90px;
 }
 
 .price:last-child {
