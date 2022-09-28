@@ -61,9 +61,10 @@ html {
   max-width: 298px;
   width: 298px;
   height: 54px;
+  padding: 0;
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   text-align: center;
