@@ -105,6 +105,18 @@
     line-height: 22px;
     color: #929699;
   }
+
+  &:focus-visible {
+    outline: none;
+    border-color: #4B9200;
+    color: #4B9200;
+    &::placeholder {
+      color:#4B9200;
+    }
+    & ~ .dollar-icon {
+      background: url(../../assets/icons/donate/dollar-icon-green.svg);
+    }
+  }
 }
 
 .dollar-icon {
