@@ -146,12 +146,12 @@
     position: relative;
     width: 48px;
     height: 38px;
-    background: url(../../assets/icons/meet-fish_icon.svg) center center no-repeat;
+    background: url(../assets/icons/meet-fish_icon.svg) center center no-repeat;
     &_vegan {
       width: 33px;
       height: 37px;
       margin-right: 4px;
-      background: url(../../../assets/icons/banana-bamboo_icon.svg) center center no-repeat;
+      background: url(../../assets/icons/banana-bamboo_icon.svg) center center no-repeat;
     }
   }
   &:hover &__img {
