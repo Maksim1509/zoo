@@ -233,7 +233,7 @@
     background: #FFEE2E;
     border-radius: 50%;
     cursor: pointer;
-&::before {
+    &::before {
       content: '';
       position: absolute;
       width: 40px;

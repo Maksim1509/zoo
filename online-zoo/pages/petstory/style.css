@@ -524,7 +524,7 @@ html {
   position: relative;
   width: 48px;
   height: 38px;
-  background: url(../assets/icons/meet-fish_icon.svg) center center no-repeat;
+  background: url(../../assets/icons/meet-fish_icon.svg) center center no-repeat;
 }
 
 .pet-card__icons_vegan {
