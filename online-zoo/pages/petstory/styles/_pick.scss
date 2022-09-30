@@ -144,3 +144,25 @@
     margin-top: 60px;
   }
 }
+
+@media screen and (max-width: 1599px) {
+  .pick {
+    padding: 30px 3% 50px;
+    &__content {
+      width: 100%;
+      padding: 30px 49px 50px 48px;
+    }
+    &__subtitle {
+      margin: 20px 0 20px;
+    }
+    &__text-wrapper {
+      padding: 0;
+    }
+    &__widjet-wrap {
+      margin-top: 40px;
+    }
+  }
+  .widjet__btn {
+    margin-top: 71px;
+  }
+}

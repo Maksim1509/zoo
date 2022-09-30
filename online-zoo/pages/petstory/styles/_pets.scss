@@ -102,6 +102,10 @@
   border-radius: 5px;
   color: #000000;
 
+  &:nth-child(8) {
+    display: none;
+  }
+
   &__img {
     position: absolute;
     z-index: -1;
@@ -163,5 +167,79 @@
     color: #FFFFFF;
     z-index: 1;
     transform: translateY(-200px);
+  }
+}
+
+@media screen and (min-width: 1599px) {
+  .pets__arrows {
+    display: none;
+    
+  }
+}
+@media screen and (max-width: 1599px) {
+  .pets {
+    padding: 148px 0 140px;
+    &__arrow_desktop {
+      display: none;
+    }
+    &__arrows {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      order: 4;
+    }
+    &__cards {
+      justify-content: center;
+      gap: 15px 29px;
+    }
+    &__palm {
+      width: 194px;
+      height: 202px;
+      background-image: url(../../assets/images/palm_tablet.png);
+    }
+    &__strelitzia {
+      width: 241px;
+      height: 180px;
+      background-image: url(../../assets/images/strelitzia_tablet.png);
+    }
+  }
+
+  .arrow-wrap {
+    display: flex;
+    column-gap: 171px;
+  }
+
+  .pet-card {
+    width: 294px;
+    height: 354px;
+    &__img {
+      width: 294px;
+      height: 294px;
+    }
+    &:nth-child(3) {
+      order: 5;
+    }
+    &:nth-child(7) {
+      order: 7;
+    }
+    &:nth-child(5) {
+      display: none;
+    }
+    &:nth-child(6) {
+      order: 3;
+    }
+    &:nth-child(8) {
+      display: flex;
+      order: 6;
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+.pet-card {
+   &:nth-child(5),
+   &:last-child {
+    display: none;
+   }
   }
 }

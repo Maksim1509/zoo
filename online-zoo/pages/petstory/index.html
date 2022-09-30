@@ -42,7 +42,7 @@
       </section>
       <section class="backstage">
         <div class="backstage__content container-content">
-          <img src="../../assets/images/cap.jpg" alt="cap" class="backstage__img">
+          <div class="backstage__img"></div>
           <article class="backstage__text">
             <h2 class="backstage__title">The Backstage of the Wilderness World.</h2>
             <p class="backstage__paragraph">The site was founded on the basis of a volunteer movement to protect and
@@ -59,7 +59,7 @@
         <div class="backstage__flower"></div>
       </section>
       <section class="pets">
-        <div class="pets__arrow"></div>
+        <div class="pets__arrow pets__arrow_desktop"></div>
         <div class="pets__cards container-content">
           <section class="pet-card">
             <img src="../../assets/images/pets/foto-card1.jpg" alt="foto-card1" class="pet-card__img">
@@ -85,6 +85,12 @@
             </div>
             <div class="pet-card__icons pet-card__icons_vegan"></div>
           </section>
+          <div class="pets__arrows">
+            <div class="arrow-wrap">
+              <div class="pets__arrow"></div>
+              <div class="pets__arrow pets__arrow_right"></div>
+            </div>
+          </div>
           <section class="pet-card">
             <img src="../../assets/images/pets/foto-card4.jpg" alt="foto-card4" class="pet-card__img">
             <div class="pet-card__desc">
@@ -109,8 +115,16 @@
             </div>
             <div class="pet-card__icons"></div>
           </section>
+          <section class="pet-card">
+            <img src="../../assets/images/pets/foto-card7.jpg" alt="foto-card7" class="pet-card__img">
+            <div class="pet-card__desc">
+              <h3 class="pet-card__title">Alligators</h3>
+              <p class="pet-card__location">Native to Southeastern U. S.</p>
+            </div>
+            <div class="pet-card__icons"></div>
+          </section>
         </div>
-        <div class="pets__arrow pets__arrow_right"></div>
+        <div class="pets__arrow pets__arrow_right pets__arrow_desktop"></div>
         <button class="pets__btn btn">choose your favorite</button>
         <div class="pets__palm"></div>
         <div class="pets__strelitzia"></div>
@@ -124,7 +138,7 @@
             </p>
             <strong class="pick__text pick__text_strong">During a time when the COVID-19 epidemic is touching all of our
               lives, we’re
-              proud and glad that people around the world find joy in PetStory.</strong>
+              proud and glad that people around the&nbsp;world find joy in PetStory.</strong>
             <p class="pick__text">
               Even though the zoo has reopened, we need you now more than ever to help us deal with these problems. Please
               consider a
@@ -252,6 +266,23 @@
                   zoo is one jf the ways to instill a love for animals.
                 </p>
               </section>
+              <section class="testimonial">
+                <div class="testimonial__header">
+                  <div class="testimonial__user-icon user-icon4"></div>
+                  <div class="testimonial__wrap">
+                    <h3 class="testimonial__name">Oska Samborska</h3>
+                    <span class="testimonial__from">Local Austria</span>
+                    <span class="testimonial__date">Yesterday</span>
+                  </div>
+                </div>
+                <p class="testimonial__text"> Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met.
+                  My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The
+                  best online zoo I’ve met. My son delighted very much ljves to watch gouillas.<br>
+                  The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to
+                  instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online
+                  zoo is one jf the ways to instill a love for animals.
+                </p>
+              </section>
             </section>
             <div class="testimonials__scrol"></div>
             <div class="testimonials__btn"><button class="btn btn_square">leave feedback</button></div>
@@ -261,14 +292,28 @@
       </section>
       <footer class="footer">
         <section class="footer__content container-content">
-          <section class="footer__left">
+          <section class="footer__top">
             <div class="footer__logo">
               <a href="#header" class="logo">
                 <div class="logo__icon"></div>
                 <h2 class="logo__text">PetStory online</h2>
               </a>
             </div>
+            <div class="footer__email-wrap">
+              <h3 class="footer__title">Subscribe to our news</h3>
+              <form class="footer__email">
+                <div class="email__wrap">
+                  <input class="email__input" type="email" name="" id="" placeholder="Enter your email" required>
+                  <div class="email__input_active"></div>
+                </div>
+                <div class="email__btn"><button class="btn-submit" type="submit">Submit</button></div>
+              </form>
+            </div>
+          </section>
+          <section class="footer__mid">
             <a href="../donate/index.html" class="footer__btn"><button class="btn btn_square">donate for volunteers</button></a>
+          </section>
+          <section class="footer__bot">
             <ul class="footer__socials socials">
               <li class="socials__item">
                 <a class="socials__link" href="/">
@@ -295,8 +340,6 @@
                 </a>
               </li>
             </ul>
-          </section>
-          <section class="footer__center">
             <nav class="footer__nav">
               <ul class="nav">
                 <li class="nav__item"><a class="nav__link nav__link_active" href="">About</a></li>
@@ -304,17 +347,7 @@
                 <li class="nav__item"><a class="nav__link" href="">Zoos</a></li>
                 <li class="nav__item"><a class="nav__link" href="">Contact us</a></li>
               </ul>
-            </nav>
-          </section>
-          <section class="footer__right">
-            <h3 class="footer__title">Subscribe to our news</h3>
-            <form class="footer__email">
-              <div class="email__wrap">
-                <input class="email__input" type="email" name="" id="" placeholder="Enter your email" required>
-                <div class="email__input_active"></div>
-              </div>
-              <div class="email__btn"><button class="btn-submit" type="submit">Submit</button></div>
-            </form>
+            </nav>          
             <div class="footer__autor">
               <a href="/" class="autor">Designed by Alisa Samborskaya</a>
               <a href="/" class="autor">©RSSchool & ©Yem Digital 2021</a>
