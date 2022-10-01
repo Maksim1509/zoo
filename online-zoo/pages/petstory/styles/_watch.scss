@@ -97,3 +97,31 @@
     }
   }
 }
+
+@media screen and (max-width: 320px) {
+  .watch {
+    margin-top: 35px;
+    height: 187px;
+    padding-top: 41.12px;
+    background: url(../../assets/images/Panda_mobile.jpg) 0 100% no-repeat;
+    background-size: contain;
+    &__content {
+      padding-right: 11px;
+    }
+    &__title {
+      width: 128.13px;
+      height: 102.44px;
+      font-size: 28px;
+      line-height: 21px;
+      &::after {
+        top: -19px;
+        left: -19px;
+        width: 119.09px;
+        height: 119.09px;
+      }
+    }
+    &__btn {
+      margin-top: 63.43px;
+    }
+  }
+}

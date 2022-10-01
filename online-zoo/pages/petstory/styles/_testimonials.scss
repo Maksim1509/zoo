@@ -303,3 +303,44 @@
     }
   }
 }
+
+@media screen and (max-width: 639px) {
+  .testimonials {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    &__content {
+      padding: 0 10px 0 11px;
+    }
+  &__title {
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+    &__btn {
+      margin-top: 30px;
+    }
+    &__flower {
+      width: 50px;
+      height: 75px;
+      background: url(../../assets/images/leav_mobile.png) -2px 11px no-repeat;
+    }
+  }
+
+  .testimonial {
+    width: 295px;
+    height: 105px;
+    padding: 10px 29px 8px 8px;
+    &::before {
+      width: 295px;
+      height: 105px;
+    }
+    &::after {
+      width: 299px;
+      height: 109px;
+    }
+    &__user-icon {
+      margin-right: 6px;
+    }
+  }
+}

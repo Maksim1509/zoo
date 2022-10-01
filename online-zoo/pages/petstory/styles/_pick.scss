@@ -211,9 +211,64 @@
       transform: rotate(-38.38deg);
       background: url(../../assets/icons/pick-arrow.svg) center center no-repeat;
       background-size: contain;
+      transition: 0.3s;
       &_2 {
         top: -30px;
         left: 356px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .pick {
+    padding: 20px 11px 20px 10px;
+    &__content {
+      padding: 20px 0 40px;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &__subtitle {
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      margin: 10px 0 20px -4px;
+    }
+    &__text {
+      display: none;
+    }
+    &__widjet-wrap {
+      max-width: 299px;
+      margin-top: 0;
+      padding-right: 0px;
+    }
+  }
+
+  .widjet__btn {
+    margin: 0;
+    margin-top: 17px;
+  }
+  .widjet {
+    &:nth-child(6) {
+      margin-top: 5px;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+      margin: 0 0 20px -1px;
+    }
+    &__text {
+      margin-top: 10px;
+    }
+    &__arrow {
+      left: 209px;
+      top: 159px;
+      transform: rotate(46.62deg);
+      &_2 {
+    top: 407px;
+    left: 209px;
       }
     }
   }

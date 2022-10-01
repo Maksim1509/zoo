@@ -1,6 +1,7 @@
 .header {
   position: absolute;
-  z-index: 2;
+  top: 0;
+  z-index: 5;
   width: 100%;
   height: 80px;
   padding: 14px 0;
@@ -86,7 +87,7 @@
     position: fixed;
     display: flex;
     align-items: center;
-    height: 32px;
+    height: 34px;
     padding: 0;
     &__content {
       padding: 0 20px;
@@ -97,5 +98,24 @@
     &__burger {
       display: block;
     }
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .header {
+  //   position: fixed;
+  //   display: flex;
+  //   align-items: center;
+    height: 35px;
+  //   padding: 0;
+    &__content {
+      padding: 0 10px;
+    }
+  //   &__nav {
+  //     display: none;
+  //   }
+  //   &__burger {
+  //     display: block;
+  //   }
   }
 }

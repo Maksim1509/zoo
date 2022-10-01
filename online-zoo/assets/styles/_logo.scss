@@ -47,3 +47,24 @@
     }
   }
 }
+
+@media screen and (max-width: 639px) {
+  footer {
+    .logo {
+      width: 128px;
+      height: 23px;
+      border: none;
+      &__text {
+        font-size: 19.0145px;
+        line-height: 23px;
+        text-align: center;
+      }
+      &__icon {
+        width: 11px;
+        height: 14px;
+        bottom: 6px;
+        left: 75px;
+      }
+    }
+  }
+}

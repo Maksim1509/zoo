@@ -252,3 +252,51 @@
     }
   }
 }
+
+@media screen and (max-width: 639px) {
+  .footer {
+    &__content {
+      padding: 20px 13px 20px 9px;
+      align-items: center;
+    }
+    &__mid {
+      margin: 86px 0 30px;
+    }
+    &__bot {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    &__autor {
+      width: 214px;
+      align-self: flex-end;
+      margin-bottom: 27px;
+      margin-right: -12px;
+      a {
+        font-size: 15px;
+      }
+    }
+    .nav {
+      column-gap: 30px;
+      a {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+      }
+    } 
+    &__socials {
+      width: 194px;
+      flex-direction: row;
+      top: 71px;
+      left: 50%;
+      transform: translateX(-50%);
+      column-gap: 30px;
+      
+    }
+  }
+  .socials {
+    &__icon {
+      margin: 0;
+    }
+  }
+}

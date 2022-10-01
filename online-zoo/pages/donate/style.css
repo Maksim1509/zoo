@@ -143,7 +143,8 @@ html {
 
 .header {
   position: absolute;
-  z-index: 2;
+  top: 0;
+  z-index: 5;
   width: 100%;
   height: 80px;
   padding: 14px 0;
@@ -259,7 +260,7 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 32px;
+    height: 34px;
     padding: 0;
   }
   .header__content {
@@ -270,6 +271,15 @@ html {
   }
   .header__burger {
     display: block;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .header {
+    height: 35px;
+  }
+  .header__content {
+    padding: 0 10px;
   }
 }
 
@@ -318,6 +328,25 @@ html {
     height: 13px;
     bottom: 3px;
     left: 4px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  footer .logo {
+    width: 128px;
+    height: 23px;
+    border: none;
+  }
+  footer .logo__text {
+    font-size: 19.0145px;
+    line-height: 23px;
+    text-align: center;
+  }
+  footer .logo__icon {
+    width: 11px;
+    height: 14px;
+    bottom: 6px;
+    left: 75px;
   }
 }
 
@@ -661,6 +690,65 @@ html {
   }
   .socials__name {
     display: none;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .footer__content {
+    padding: 20px 13px 20px 9px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__mid {
+    margin: 86px 0 30px;
+  }
+  .footer__bot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__autor {
+    width: 214px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-bottom: 27px;
+    margin-right: -12px;
+  }
+  .footer__autor a {
+    font-size: 15px;
+  }
+  .footer .nav {
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+  }
+  .footer .nav a {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+  .footer__socials {
+    width: 194px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    top: 71px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+  }
+  .socials__icon {
+    margin: 0;
   }
 }
 

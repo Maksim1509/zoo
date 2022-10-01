@@ -295,3 +295,35 @@
     }
   }
 }
+
+@media screen and (max-width: 639px) {
+  .pets {
+    padding: 49px 0 60px;
+    &__cards {
+      padding-left: 17px;
+      padding-right: 18px;
+      row-gap: 20px;
+    }
+    &__arrows {
+      display: none;
+    }
+    &__btn {
+      margin: 20px 3px 0 0;
+    }
+    &__palm {
+      width: 57px;
+      height: 72px;
+      background: url(../../assets/images/palm_mobile.png) 100% 100% no-repeat;
+    }
+    &__strelitzia {
+      width: 85px;
+      height: 71px;
+      background: url(../../assets/images/strelitzia_mobile.png) 100% 4px no-repeat;
+    }
+  }
+
+  .pet-card {
+    width: 285px;
+    padding-bottom: 10.5px;
+  }
+}
