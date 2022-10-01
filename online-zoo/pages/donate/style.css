@@ -20,6 +20,18 @@ html {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 1599px) {
+  .container-content {
+    padding: 0 3%;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .container-content {
+    max-width: none;
+  }
+}
+
 @font-face {
   font-family: "Roboto";
   src: local(Roboto), url("../../assets/fonts/Roboto-Regular.ttf") format("truetype");
@@ -237,6 +249,11 @@ html {
   cursor: default;
 }
 
+.nav__link_donate {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
 .nav__link:hover {
   color: #F9804B;
 }
@@ -419,6 +436,10 @@ html {
 
 .footer__email:invalid .email__input_active::after {
   opacity: 1;
+}
+
+.footer__nav {
+  margin-left: 9.5%;
 }
 
 .footer__autor {
@@ -653,13 +674,16 @@ html {
 
 @media screen and (max-width: 1599px) {
   .footer__content {
-    padding: 40px 1.8% 50px 4.3%;
+    padding: 40px 30px 50px 31px;
   }
   .footer__top {
     max-width: 907px;
   }
   .footer__nav {
     margin-left: 9.5%;
+  }
+  .footer__nav_donate {
+    margin-left: 12.5%;
   }
 }
 
@@ -753,8 +777,20 @@ html {
 }
 
 .panda {
-  margin-top: 76px;
+  margin-top: 80px;
   width: 100%;
+  height: 390px;
+  background: url(../../assets/images/panda_bg.jpg);
+  background-size: cover;
+}
+
+@media screen and (max-width: 1599px) {
+  .panda {
+    height: 395px;
+    width: auto;
+    margin-top: 80px;
+    background-position: -184px;
+  }
 }
 
 .donate {
@@ -1164,6 +1200,64 @@ html {
 
 .price:last-child {
   margin: 0;
+}
+
+@media screen and (max-width: 1599px) {
+  .donate__content {
+    padding: 40px 30px 30px;
+  }
+  .donate__title {
+    max-width: 90%;
+  }
+  .donate__text {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 46px;
+  }
+  .donate__text span {
+    font-weight: 400;
+  }
+  .donate__title2 {
+    margin-bottom: 40px;
+  }
+  .donate .donate-pick {
+    padding: 20px 44px 46px 47px;
+  }
+  .donate .donate-pick__desc {
+    margin-top: 10px;
+    margin-bottom: 108px;
+  }
+  .donate .donate-pick__bar {
+    max-width: 810px;
+  }
+  .donate .bar {
+    width: 100%;
+    padding-left: 11px;
+    padding-right: 9px;
+  }
+  .donate .bar__text {
+    margin-bottom: 20px;
+  }
+  .donate .bar__line {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-column-gap: 120px;
+            column-gap: 120px;
+    width: 100%;
+  }
+  .donate .bar__dot {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .donate .bar__dot:first-child {
+    display: none;
+  }
+  .donate .price:first-child {
+    display: none;
+  }
 }
 
 .test {

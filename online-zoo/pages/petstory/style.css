@@ -163,6 +163,11 @@ html {
   cursor: default;
 }
 
+.nav__link_donate {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
 .nav__link:hover {
   color: #F9804B;
 }
@@ -389,7 +394,7 @@ html {
     height: 187px;
     padding-top: 41.12px;
     background: url(../../assets/images/Panda_mobile.jpg) 0 100% no-repeat;
-    background-size: contain;
+    background-size: cover;
   }
   .watch__content {
     padding-right: 11px;
@@ -637,7 +642,10 @@ html {
   .backstage__text {
     max-width: none;
   }
-  .backstage__paragraph, .backstage__title {
+  .backstage__title {
+    max-width: 95.21%;
+  }
+  .backstage__title + p {
     max-width: 95.21%;
   }
   .backstage__flower {
@@ -1792,6 +1800,10 @@ html {
   opacity: 1;
 }
 
+.footer__nav {
+  margin-left: 9.5%;
+}
+
 .footer__autor {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2024,13 +2036,16 @@ html {
 
 @media screen and (max-width: 1599px) {
   .footer__content {
-    padding: 40px 1.8% 50px 4.3%;
+    padding: 40px 30px 50px 31px;
   }
   .footer__top {
     max-width: 907px;
   }
   .footer__nav {
     margin-left: 9.5%;
+  }
+  .footer__nav_donate {
+    margin-left: 12.5%;
   }
 }
 

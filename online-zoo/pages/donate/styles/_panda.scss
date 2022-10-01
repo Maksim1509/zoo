@@ -1,4 +1,17 @@
 .panda {
-  margin-top: 76px;
+  margin-top: 80px;
   width: 100%;
+  height: 390px;
+  background: url(../../assets/images/panda_bg.jpg);
+  background-size: cover;
+}
+
+@media screen and (max-width: 1599px) {
+  .panda {
+    height: 395px;
+    width: auto;
+    margin-top: 80px;
+    background-position: -184px;
+  }
+
 }

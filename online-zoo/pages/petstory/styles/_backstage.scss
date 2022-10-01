@@ -114,10 +114,13 @@
       margin: 20px 0 10px;
       padding-left: 2px;
     }
-     &__text {
+    &__text {
         max-width: none;
      }
-     &__paragraph, &__title {
+    &__title {
+      & + p {
+        max-width: 95.21%;
+       }
       max-width: 95.21%;
      }
     &__flower {

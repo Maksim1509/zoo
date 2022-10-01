@@ -310,3 +310,61 @@
     margin: 0;
   }
 }
+
+
+@media screen and (max-width: 1599px) {
+  .donate {
+    &__content {
+      padding: 40px 30px 30px;
+    }
+    &__title {
+      max-width: 90%;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 22px;
+      margin: 0;
+      margin-top: 30px;
+      margin-bottom: 46px;
+      span {
+        font-weight: 400;
+      }
+    }
+    &__title2 {
+      margin-bottom: 40px;
+    }
+
+    .donate-pick {
+      padding: 20px 44px 46px 47px;
+      &__desc {
+        margin-top: 10px;
+        margin-bottom: 108px;
+      }
+      &__bar {
+        max-width: 810px;
+      }
+    }
+    .bar {
+      width: 100%;
+      padding-left: 11px;
+      padding-right: 9px;
+      &__text {
+        margin-bottom: 20px;
+      }
+      &__line {
+        justify-content: flex-start;
+        column-gap: 120px;
+        width: 100%;
+      }
+      &__dot {
+        flex-shrink: 0;
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+    .price:first-child {
+      display: none;
+    }
+  }
+}

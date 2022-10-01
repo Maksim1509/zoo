@@ -46,6 +46,9 @@
       opacity: 1;
     }
   }
+  &__nav {
+    margin-left: 9.5%;
+  }
   &__autor {
     display: flex;
     flex-wrap: wrap;
@@ -209,13 +212,16 @@
 @media screen and (max-width: 1599px) {
   .footer {
     &__content {
-      padding: 40px 1.8% 50px 4.3%;
+      padding: 40px 30px 50px 31px;
     }
     &__top {
       max-width: 907px;
     }
     &__nav {
       margin-left: 9.5%;
+      &_donate {
+        margin-left: 12.5%;
+      }
     }
   }
 }

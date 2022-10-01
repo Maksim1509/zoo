@@ -67,6 +67,10 @@
       color: $orange;
       cursor: default;
     }
+    &_donate {
+      color: #FFFFFF;
+      cursor: pointer;
+    }
   }
   &__link:hover {
     color: $orange;
@@ -103,19 +107,9 @@
 
 @media screen and (max-width: 639px) {
   .header {
-  //   position: fixed;
-  //   display: flex;
-  //   align-items: center;
     height: 35px;
-  //   padding: 0;
     &__content {
       padding: 0 10px;
     }
-  //   &__nav {
-  //     display: none;
-  //   }
-  //   &__burger {
-  //     display: block;
-  //   }
   }
 }
