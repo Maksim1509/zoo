@@ -169,6 +169,39 @@ html {
   margin-left: 63px;
 }
 
+.header__burger {
+  display: none;
+}
+
+.burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 18px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.burger__line {
+  width: 18px;
+  height: 2px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.burger:hover .burger__line {
+  background: #F9804B;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -217,6 +250,29 @@ html {
   }
 }
 
+@media screen and (max-width: 999px) {
+  .header {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 32px;
+    padding: 0;
+  }
+  .header__content {
+    padding: 0 20px;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__burger {
+    display: block;
+  }
+}
+
 .logo {
   position: relative;
   display: block;
@@ -244,6 +300,25 @@ html {
   height: 22.98px;
   background: url(../../assets/icons/bamboo.svg) no-repeat;
   background-size: contain;
+}
+
+@media screen and (max-width: 999px) {
+  header .logo {
+    width: 46.86px;
+    height: 29.03px;
+    border: none;
+  }
+  header .logo__text {
+    font-size: 12.2899px;
+    line-height: 15px;
+    text-align: center;
+  }
+  header .logo__icon {
+    width: 9px;
+    height: 13px;
+    bottom: 3px;
+    left: 4px;
+  }
 }
 
 .footer {
@@ -556,6 +631,36 @@ html {
   }
   .footer__nav {
     margin-left: 9.5%;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .footer__content {
+    padding: 12px 20px;
+    position: relative;
+  }
+  .footer__mid {
+    margin-top: 32px;
+    margin-bottom: 67px;
+  }
+  .footer__nav {
+    margin-left: 0;
+  }
+  .footer__nav .nav {
+    -webkit-column-gap: 37px;
+            column-gap: 37px;
+  }
+  .footer__socials {
+    position: absolute;
+    top: 11px;
+    right: 9px;
+    row-gap: 20px;
+  }
+  .footer__email-wrap {
+    display: none;
+  }
+  .socials__name {
+    display: none;
   }
 }
 

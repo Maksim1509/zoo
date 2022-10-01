@@ -166,3 +166,55 @@
     margin-top: 71px;
   }
 }
+
+@media screen and (max-width: 999px) {
+  .pick {
+    padding: 20px 0 20px;
+    &__content {
+      padding: 10px 20px 60px;
+    }
+    &__title {
+      font-size: 42px;
+      line-height: 50px;
+    }
+    &__subtitle {
+      font-size: 22px;
+      line-height: 26px;
+      margin-top: 21px;
+      margin-bottom: 19px;
+    }
+    &__widjet-wrap {
+      max-width: 600px;
+      position: relative;
+      margin-top: 30px;
+      column-gap: 42px;
+      padding-right: 12px;
+    }
+  }
+
+  .widjet__btn {
+    margin-top: 40px;
+    margin-left: 10px;
+  }
+  .widjet {
+    &__title {
+      margin-bottom: 20px;
+      margin-left: 10px;
+    }
+    &__arrow {
+      position: absolute;
+      z-index: 999;
+      left: 148px;
+      top: -28px;
+      width: 70.12px;
+      height: 76.66px;
+      transform: rotate(-38.38deg);
+      background: url(../../assets/icons/pick-arrow.svg) center center no-repeat;
+      background-size: contain;
+      &_2 {
+        top: -30px;
+        left: 356px;
+      }
+    }
+  }
+}

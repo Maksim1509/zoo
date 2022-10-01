@@ -219,3 +219,36 @@
     }
   }
 }
+
+@media screen and (max-width: 999px) {
+  .footer {
+    &__content {
+      padding: 12px 20px;
+      position: relative;
+    }
+    &__mid {
+      margin-top: 32px;
+      margin-bottom: 67px;
+    }
+    &__nav {
+      margin-left: 0;
+      .nav {
+        column-gap: 37px;
+      }
+    }
+    &__socials {
+      position: absolute;
+      top: 11px;
+      right: 9px;
+      row-gap: 20px;
+    }
+    &__email-wrap {
+      display: none;
+    }
+  }
+  .socials {
+    &__name {
+      display: none;
+    }
+  }
+}

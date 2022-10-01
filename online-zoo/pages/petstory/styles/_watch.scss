@@ -71,3 +71,29 @@
     }
   }
 }
+
+@media screen and (max-width: 999px) {
+  .watch {
+    height: 373px;
+    padding-top: 80px;
+    &__content {
+      padding-right: 16.77px;
+    }
+    &__title {
+      width: 255.64px;
+      height: 204.38px;
+      font-size: 54.2894px;
+      line-height: 41px;
+      &::after {
+        top: -38px;
+        left: -37px;
+        width: 237.6px;
+        height: 237.6px;
+      }
+    }
+    &__btn {
+      margin: 0;
+      margin-top: -7px;
+    }
+  }
+}

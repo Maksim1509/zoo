@@ -254,3 +254,52 @@
     }
   }
 }
+
+@media screen and (max-width: 999px) {
+  .testimonials {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    &__content {
+      padding: 0 20px;
+    }
+    &__cards {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 19px;
+    }
+    &__scrol {
+      display: none;
+    }
+    &__btn {
+      .btn {
+        width: 240px;
+        &::before,
+        &::after {
+          width: 240px;
+        }
+      }
+      align-self: center;
+      margin-top: 40px;
+    }
+    &__flower {
+      width: 168px;
+      height: 204px;
+      background-position: 52px 69px;
+      background-size: contain;
+    }
+  }
+
+  .testimonial {
+    width: 596px;
+    height: 105px;
+    padding: 15px 29px 8px 12px;
+    &::before {
+      width: 596px;
+      height: 105px;
+    }
+    &::after {
+      width: 600px;
+      height: 109px;
+    }
+  }
+}

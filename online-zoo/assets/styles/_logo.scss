@@ -26,3 +26,24 @@
     background-size: contain;
   }
 }
+
+@media screen and (max-width: 999px) {
+  header {
+    .logo {
+      width: 46.86px;
+      height: 29.03px;
+      border: none;
+      &__text {
+        font-size: 12.2899px;
+        line-height: 15px;
+        text-align: center;
+      }
+      &__icon {
+        width: 9px;
+        height: 13px;
+        bottom: 3px;
+        left: 4px;
+      }
+    }
+  }
+}
