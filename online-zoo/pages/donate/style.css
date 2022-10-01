@@ -793,6 +793,15 @@ html {
   }
 }
 
+@media screen and (max-width: 999px) {
+  .panda {
+    height: 340px;
+    width: auto;
+    margin-top: 34px;
+    background-position: -282px -2px;
+  }
+}
+
 .donate {
   width: 100%;
   margin-top: -5px;
@@ -1257,6 +1266,104 @@ html {
   }
   .donate .price:first-child {
     display: none;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .donate__content {
+    padding: 30px 20px 46px;
+  }
+  .donate__title {
+    font-size: 24px;
+    line-height: 29px;
+    max-width: none;
+  }
+  .donate__text {
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .donate__title2 {
+    margin-bottom: 30px;
+  }
+  .donate__input-amount {
+    margin-bottom: 31px;
+  }
+  .donate__input-amount .input-amount {
+    width: 180px;
+    height: 42px;
+    padding-left: 6px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+  .donate__input-amount .dollar-icon {
+    top: 11px;
+  }
+  .donate .donate-pick {
+    padding: 30px 0 31px;
+  }
+  .donate .donate-pick__title {
+    margin: 0;
+  }
+  .donate .donate-pick__desc {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 97px;
+  }
+  .donate .donate-pick__animal {
+    margin-bottom: 40px;
+  }
+  .donate .donate-pick__bar {
+    width: 600px;
+  }
+  .donate .bar {
+    padding: 0 35px;
+  }
+  .donate .bar__text {
+    padding-left: 10px;
+    margin-bottom: 7px;
+  }
+  .donate .bar__price {
+    margin-left: 17px;
+    margin-top: 12px;
+  }
+  .donate .bar__dot:nth-child(2), .donate .bar__dot:nth-child(3) {
+    display: none;
+  }
+  .donate .bar__dot:nth-child(6)::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: -15px;
+    top: -15px;
+    background: url(../../assets/icons/donate/ring2.svg) no-repeat;
+    cursor: pointer;
+  }
+  .donate .bar__dot:nth-child(6)::after {
+    content: '';
+    position: absolute;
+    width: 22.95px;
+    height: 22.95px;
+    left: -7.5px;
+    top: -7.5px;
+    background: url(../../assets/icons/donate/ring1.svg);
+    cursor: pointer;
+  }
+  .donate .price:nth-child(2), .donate .price:nth-child(3) {
+    display: none;
+  }
+  .donate .price:nth-child(6) .price__dollar {
+    background: url(../../assets/icons/donate/dollar-icon_or.svg);
+  }
+  .donate .price:nth-child(6) .price__count {
+    color: #FE9013;
   }
 }
 

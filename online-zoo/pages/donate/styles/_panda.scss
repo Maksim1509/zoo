@@ -13,5 +13,13 @@
     margin-top: 80px;
     background-position: -184px;
   }
+}
 
+@media screen and (max-width: 999px) {
+  .panda {
+    height: 340px;
+    width: auto;
+    margin-top: 34px;
+    background-position: -282px -2px;
+  }
 }
