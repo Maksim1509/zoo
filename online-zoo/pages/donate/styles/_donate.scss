@@ -476,3 +476,131 @@
     }
   }
 }
+
+@media screen and (max-width: 639px) {
+  .donate {
+    &__content {
+      padding: 30px 10px 20px;
+    }
+    &__title2 {
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &__input-amount {
+      margin-top: 25px;
+      margin-bottom: 24px;
+    }
+    &__radio {
+      column-gap: 50px;
+      margin-bottom: 28px;
+    }
+    &__share {
+      letter-spacing: -0.008px;
+    }
+    
+    .donate-pick {
+      padding: 20px 0;
+      &__title {
+        font-size: 24px;
+        line-height: 29px;
+      }
+      &__desc {
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 10px;
+        margin-bottom: 36px;
+      }
+      &__animal {
+        align-items: center;
+        margin-bottom: 6px;
+        
+      }
+      &__days {
+        font-size: 40.6015px;
+        line-height: 32px;
+        margin-top: 8px;
+        row-gap: 6.2px;
+      }
+      &__text {
+        font-size: 9.02255px;
+        line-height: 13px;
+      }
+      &__x {
+        width: 7.89px;
+        height: 7.89px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0;
+        margin-left: 6px;
+        margin-top: -9px;
+      }
+      &__panda {
+        width: 160px;
+        height: 112px;
+        margin-left: 33px;
+        background: url(../../../assets/icons/donate/panda_widget_mobile.png) 0 100% no-repeat;
+      }
+      &__bar {
+        width: 300px;
+        .bar {
+          height: 13.5px;
+          padding-left: 17.5px;
+          padding-right: 18.5px;
+          border-radius: 1px;
+          &__text {
+            padding: 0;
+          }
+          &__dot {
+            width: 5px;
+            height: 5px;
+            &:nth-child(6) {
+              &::before {
+                top: -7px;
+                left: -7px;
+                width: 20px;
+                height: 20px;
+                background-size: contain;
+              }
+              &::after {
+                top: -3px;
+                left: -3px;
+                width: 11.48px;
+                height: 11.48px;
+                background-size: contain;
+              }
+              
+            }
+          }
+          &__line {
+            column-gap: 60px;
+          }
+          &__price {
+            margin-top: 7px;
+            margin-left: 7.5px;
+            .price { 
+              &:nth-child(6) {
+                margin-right: 29;
+                margin-left: -1px;
+              }
+              &:nth-child(7) {
+                margin-right: 42px;
+              }
+              &:last-child {
+                margin: 0;
+              }
+              margin-right: 36.5px;
+              font-size: 13px;
+              line-height: 18px;
+              &__dollar {
+                width: 5px;
+                height: 10px;
+                background-size: contain;
+              }
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}
