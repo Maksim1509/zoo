@@ -1438,7 +1438,7 @@ html {
     width: 160px;
     height: 112px;
     margin-left: 33px;
-    background: url(../../../assets/icons/donate/panda_widget_mobile.png) 0 100% no-repeat;
+    background: url(../../assets/icons/donate/panda_widget_mobile.png) 0 100% no-repeat;
   }
   .donate .donate-pick__bar {
     width: 300px;
