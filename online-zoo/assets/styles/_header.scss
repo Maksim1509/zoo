@@ -114,3 +114,67 @@
     }
   }
 }
+
+.menu-wrap {
+  display: none;
+}
+
+@media screen and (max-width: 999px) {
+  .menu-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 9999;
+    bottom: 100%;
+    background: #FFFFFF;
+    width: 100%;
+    height: 329px;
+    padding: 10px 20px 40px 10px;
+    transition: 0.3s;
+    &_open {
+      transform: translateY(100%);
+    }
+    .logo {
+      border-color: #FE9013;
+      &__text {
+        color: #FE9013;
+      }
+      &__icon {
+        right: 58px;
+        bottom: 2.8px;
+        color: #FE9013;
+        background: url(../../assets/icons/bamboo_or.svg) no-repeat;
+      }
+    }
+  }
+  .menu {
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 100%;
+    list-style: none;
+    &__link {
+      font-size: 16px;
+      line-height: 22px;
+      color: #333B41;
+      transition: 0.3s;
+      &:hover {
+        color: $orange;
+      }
+    }
+    &__close-icon {
+      border: none;
+      background-color: transparent;
+      width: 24px;
+      height: 24px;
+      background: url(../../assets/icons/close_icon.svg) no-repeat;
+      background-size: contain;
+      cursor: pointer;
+    }
+  }
+}

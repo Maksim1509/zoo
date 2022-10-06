@@ -101,8 +101,9 @@
   border: 1px solid #FA6F32;
   border-radius: 5px;
   color: #000000;
+  user-select: none;
 
-  &:nth-child(8) {
+  &:nth-child(9) {
     display: none;
   }
 
@@ -116,6 +117,7 @@
     border-radius: 5px 5px 0 0;
     object-fit: cover;
     transition: 0.3s;
+    user-select: none;
   }
 
   &__desc {
@@ -325,5 +327,134 @@
   .pet-card {
     width: 285px;
     padding-bottom: 10.5px;
+  }
+}
+
+
+.carousel {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  &__item-container {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .item {
+    position: absolute;
+    display: none;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    width: 1160px;
+    &_active {
+      position: relative;
+    }
+    &_active,
+    &_next {
+      display: flex;
+    }
+    &_next {
+      position: absolute;
+    }
+    
+  }
+}
+
+
+.from-left {
+  animation: from-left 1s ease-in-out;
+}
+
+.to-right {
+  animation: to-right 1s ease-in-out;
+}
+
+.from-right {
+  animation: from-right 1s ease-in-out;
+}
+
+.to-left {
+  animation: to-left 1s ease-in-out;
+}
+
+
+@keyframes to-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: 110%;
+  }
+}
+
+@keyframes from-left {
+  from {
+    left: -110%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+
+@keyframes from-right {
+  from {
+    left: 110%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes to-left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -110%;
+  }
+}
+
+@media screen and (max-width: 1599px) {
+  .carousel {
+    position: relative;
+    justify-content: center;
+    padding: 0 30px;
+    &__item-container {
+      max-width: 942px;
+    }
+    .item {
+      row-gap: 80px;
+      width: 942px;
+    }
+    .pets__arrow {
+      display: block;
+      position: absolute;
+      &_left {
+        left: 35%;
+      }
+      &_right {
+        right: 35%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .carousel {
+    .item {
+      width: 600px;
+      .pet-container {
+          &:nth-child(5),
+          &:nth-child(6),
+          &:nth-child(7) {
+            display: none;
+         }
+    }
+    }
+    
   }
 }

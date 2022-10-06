@@ -24,6 +24,7 @@ html {
   }
 }
 
+
 @import '../../assets/styles/vars';
 @import '../../assets/styles/mixins';
 @import '../../assets/styles/_fonts.scss';
@@ -33,6 +34,7 @@ html {
 @import '../../assets/styles/footer';
 @import './styles/_panda.scss';
 @import './styles/_donate.scss';
+@import '../../assets/styles/_blur.scss';
 
 
 .test {
