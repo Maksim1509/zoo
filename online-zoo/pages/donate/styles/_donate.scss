@@ -225,13 +225,20 @@
     height: 2px;
     background: #72828E;
   }
-
+  &__dot-wrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
   &__dot {
     position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     width: 10px;
-    height: 10px;
-    background: #FFEE2E;
+    height: 10px;  
     border-radius: 50%;
+    background: #FFEE2E;
     cursor: pointer;
     &::before {
       content: '';
@@ -242,32 +249,44 @@
       top: -15px;
       cursor: pointer;
     }
-    &_active::before {
-      content: '';
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      left: -15px;
-      top: -15px;
-      background: url(../../assets/icons/donate/ring2.svg) no-repeat;
-      cursor: pointer;
+    &:checked {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: -15px;
+        top: -15px;
+        background: url(../../assets/icons/donate/ring2.svg) no-repeat;
+        cursor: pointer;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        width: 22.95px;
+        height: 22.95px;
+        left: -6.5px;
+        top: -6.5px;
+        background: url(../../assets/icons/donate/ring1.svg);
+        background-size: contain;
+        cursor: pointer;
+      }
     }
-    &_active::after {
-      content: '';
-      position: absolute;
-      width: 22.95px;
-      height: 22.95px;
-      left: -7.5px;
-      top: -7.5px;
-      background: url(../../assets/icons/donate/ring1.svg);
-      cursor: pointer;
+    &:checked+label {
+      .price__count {
+        color: #FE9013;
+      }
+      .price__dollar {
+        background: url(../../assets/icons/donate/dollar-icon_or.svg);
+      }
     }
   }
 
-  &__price {
-    display: flex;
-    max-width: 952px;
-    margin-top: 12px;
+  &__label {
+    position: absolute;
+    left: -30px;
+    top: 30px;
+    cursor: pointer;
   }
 }
 
@@ -344,6 +363,7 @@
         max-width: 810px;
       }
     }
+
     .bar {
       width: 100%;
       padding-left: 11px;
@@ -356,15 +376,12 @@
         column-gap: 120px;
         width: 100%;
       }
+      &__dot-wrap:first-child {
+        display: none;
+      }
       &__dot {
         flex-shrink: 0;
-        &:first-child {
-          display: none;
-        }
       }
-    }
-    .price:first-child {
-      display: none;
     }
   }
 }
@@ -431,46 +448,10 @@
         margin-left: 17px;
         margin-top: 12px;
       }
-      &__dot {
+      &__dot-wrap {
         &:nth-child(2),
         &:nth-child(3) {
           display: none;
-        }
-        &:nth-child(6) {
-          &::before {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            left: -15px;
-            top: -15px;
-            background: url(../../assets/icons/donate/ring2.svg) no-repeat;
-            cursor: pointer;
-          }
-          &::after {
-            content: '';
-            position: absolute;
-            width: 22.95px;
-            height: 22.95px;
-            left: -7.5px;
-            top: -7.5px;
-            background: url(../../assets/icons/donate/ring1.svg);
-            cursor: pointer;
-          }
-        }
-      }
-    }
-    .price {
-      &:nth-child(2),
-      &:nth-child(3) {
-        display: none;
-      }
-      &:nth-child(6) {
-        .price__dollar {
-          background: url(../../assets/icons/donate/dollar-icon_or.svg);
-        }
-        .price__count {
-          color: #FE9013;
         }
       }
     }
@@ -550,13 +531,18 @@
           &__text {
             padding: 0;
           }
+          &__dot-wrap {
+            height: 5px;
+            width: 5px;
+            flex-shrink: 0;
+          }
           &__dot {
             width: 5px;
             height: 5px;
-            &:nth-child(6) {
+            &:checked {
               &::before {
-                top: -7px;
-                left: -7px;
+                top: -7.6px;
+                left: -7.6px;
                 width: 20px;
                 height: 20px;
                 background-size: contain;
@@ -568,27 +554,12 @@
                 height: 11.48px;
                 background-size: contain;
               }
-              
             }
           }
-          &__line {
-            column-gap: 60px;
-          }
-          &__price {
-            margin-top: 7px;
-            margin-left: 7.5px;
+          &__label  {
+            top: 12px;
+            left: -13px;
             .price { 
-              &:nth-child(6) {
-                margin-right: 29;
-                margin-left: -1px;
-              }
-              &:nth-child(7) {
-                margin-right: 42px;
-              }
-              &:last-child {
-                margin: 0;
-              }
-              margin-right: 36.5px;
               font-size: 13px;
               line-height: 18px;
               &__dollar {
@@ -598,8 +569,10 @@
               }
             }
           }
+          &__line {
+            column-gap: 60px;  
+          }
         }
-        
       }
     }
   }

@@ -84,46 +84,83 @@
             <div class="donate-pick__bar">
               <span class="bar__text">Amount</span>
               <div class="bar">
-                <div class="bar__line">
-                  <div class="bar__dot"></div>
-                  <div class="bar__dot"></div>
-                  <div class="bar__dot bar__dot_active"></div>
-                  <div class="bar__dot"></div>
-                  <div class="bar__dot"></div>
-                  <div class="bar__dot"></div>
-                  <div class="bar__dot"></div>
-                  <div class="bar__dot"></div>
-                </div>
-              </div>
-              <div class="bar__price">
-                <div class="price">
-                  <div class="price__dollar"></div><span class="price__count">5000</span>
-                </div>
-                <div class="price">
-                  <div class="price__dollar"></div><span class="price__count">2000</span>
-                </div>
-                <div class="price">
-                  <div class="price__dollar price__dollar_active"></div><span class="price__count price__count_active">1000</span>
-                </div>
-                <div class="price">
-                  <div class="price__dollar"></div><span class="price__count">500</span>
-                </div>
-                <div class="price">
-                  <div class="price__dollar"></div><span class="price__count">250</span>
-                </div>
-                <div class="price">
-                  <div class="price__dollar"></div><span class="price__count">100</span>
-                </div>
-                <div class="price">
-                  <div class="price__dollar"></div><span class="price__count">50</span>
-                </div>
-                <div class="price">
-                  <div class="price__dollar"></div><span class="price__count">25</span>
-                </div>
+                <form class="bar__line">
+                  <div class="bar__dot-wrap">
+                    <input name="amount-bar" type="radio" value="5000" id="5000"  class="bar__dot">
+                    <label for="5000" class="bar__label">
+                      <div class="price">
+                        <div class="price__dollar"></div><span class="price__count">5000</span>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="bar__dot-wrap">
+                    <input name="amount-bar" type="radio" value="2000" id="2000"  class="bar__dot">
+                    <label for="2000" class="bar__label">
+                      <div class="price">
+                        <div class="price__dollar"></div><span class="price__count">2000</span>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="bar__dot-wrap">
+                    <input name="amount-bar" type="radio" value="1000" id="1000"  class="bar__dot">
+                    <label for="1000" class="bar__label">
+                      <div class="price">
+                        <div class="price__dollar"></div><span class="price__count">1000</span>
+                      </div>
+                    </label>
+                  </div>
+                  
+                  <div class="bar__dot-wrap">
+                    <input name="amount-bar" type="radio" value="500" id="500"  class="bar__dot">
+                    <label for="500" class="bar__label">
+                      <div class="price">
+                        <div class="price__dollar"></div><span class="price__count">500</span>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="bar__dot-wrap">
+                    <input name="amount-bar" type="radio" value="250" id="250"  class="bar__dot">
+                    <label for="250" class="bar__label">
+                      <div class="price">
+                        <div class="price__dollar"></div><span class="price__count">250</span>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="bar__dot-wrap">
+                    <input name="amount-bar" type="radio" value="100" id="100"  class="bar__dot" checked>
+                    <label for="100" class="bar__label">
+                      <div class="price">
+                        <div class="price__dollar"></div><span class="price__count">100</span>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="bar__dot-wrap">
+                    <input name="amount-bar" type="radio" value="50" id="50"  class="bar__dot">
+                    <label for="50" class="bar__label">
+                      <div class="price">
+                        <div class="price__dollar"></div><span class="price__count">50</span>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="bar__dot-wrap">
+                    <input name="amount-bar" type="radio" value="25" id="25"  class="bar__dot">
+                    <label for="25" class="bar__label">
+                      <div class="price">
+                        <div class="price__dollar"></div><span class="price__count">25</span>
+                      </div>
+                    </label>
+                  </div>
+                </form>
               </div>
             </div>
             <div class="donate__input-amount">
-              <input class="input-amount" type="number" onKeyPress="if(this.value.length==4) return false;" placeholder="Another amount">
+              <input value="100" class="input-amount" type="number" onKeyPress="if(this.value.length==4) return false;" placeholder="Another amount">
               <div class="dollar-icon"></div>
             </div>
             <form action="" class="donate__radio">
