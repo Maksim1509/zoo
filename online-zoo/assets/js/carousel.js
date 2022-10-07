@@ -103,6 +103,7 @@ export default () => {
 
     const items = document.querySelectorAll('.item');
     const newPetsColl = createPetsColl();
+    const newPetsColl1 = createPetsColl();
 
     const itemToHide = items[1];
     if(dir === 'to-right') {
@@ -116,6 +117,8 @@ export default () => {
     itemToHide.classList.add(dir);
     itemToHide.addEventListener('animationend', function() {
       itemToHide.classList.remove('item_active', dir);
+      this.replaceWith(newPetsColl1);
+      // container.prepend(newPetsColl1);
     });
   };
 
@@ -164,19 +167,19 @@ export default () => {
 
   rigth.addEventListener('click', () => {
     if(isEnabled) {
-      hideItem('to-right');
+      hideItem('to-left');
 
       changeIndex(1);
 
-      showItem('from-left');
+      showItem('from-right');
     }
   })
 
   left.addEventListener('click', () => {
     if(isEnabled) {
-      hideItem('to-left');
+      hideItem('to-right');
       changeIndex(-1);
-      showItem('from-right');
+      showItem('from-left');
     }
   })
 };
