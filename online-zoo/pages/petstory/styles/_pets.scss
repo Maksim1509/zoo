@@ -255,6 +255,9 @@
       height: 131px;
       background: url(../../assets/images/strelitzia_small.png);
     }
+    .carousel {
+      padding: 0 20px;
+    }
   }
   .arrow-wrap {
     column-gap: 30px;
@@ -456,5 +459,22 @@
     }
     }
     
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .carousel {
+    .item {
+      width: 285px;
+      flex-direction: column;
+    }
+    .pets__arrow {
+      &_left {
+        left: 25%;
+      }
+      &_right {
+        right: 25%;
+      }
+    }
   }
 }

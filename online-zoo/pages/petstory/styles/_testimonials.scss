@@ -98,13 +98,14 @@
   padding: 15px 11px 19px 16px;
   border-radius: 20px;
   transition: .4s ease-in-out;
+  cursor: pointer;
   &:last-child {
     margin-right: 0;
   }
   &::before {
     content: '';
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     width: 264px;
@@ -187,6 +188,27 @@
     color: #767474;
     overflow: hidden;
   }
+  &_popap {
+    width: 267px;
+    height: 391px;
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+  }
+  &__close {
+    z-index: 1;
+    position: absolute;
+    top: -8px;
+    right: -20px;
+    width: 14px;
+    height: 14px;
+    background: url(../../assets/icons/close_icon.svg) center center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
 }
 
 .user-icon2 {
@@ -260,12 +282,18 @@
     &__content {
       padding: 0 20px;
     }
+    &__cards-wrap {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
     &__cards {
+      position: relative;
       flex-direction: column;
       align-items: center;
       row-gap: 19px;
     }
-    &__scrol {
+    &__scroll {
       display: none;
     }
     &__btn {
@@ -288,16 +316,39 @@
   }
 
   .testimonial {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: flex;
+    }
+    display: none;
     width: 596px;
     height: 105px;
     padding: 15px 29px 8px 12px;
+    overflow: hidden;
+    margin-right: 0;
     &::before {
       width: 596px;
       height: 105px;
+      
     }
     &::after {
       width: 600px;
       height: 109px;
+    }
+    &_popap {
+      display: flex;
+      width: 267px;
+      height: 391px;
+      overflow: visible;
+      &::before {
+        width: 263px;
+        height: 387px;
+      }
+      &::after {
+        width: 267px;
+        height: 391px;
+      }
     }
   }
 }
@@ -339,6 +390,20 @@
     }
     &__user-icon {
       margin-right: 6px;
+    }
+    &_popap {
+      display: flex;
+      width: 267px;
+      height: 391px;
+      overflow: visible;
+      &::before {
+        width: 263px;
+        height: 387px;
+      }
+      &::after {
+        width: 267px;
+        height: 391px;
+      }
     }
   }
 }
