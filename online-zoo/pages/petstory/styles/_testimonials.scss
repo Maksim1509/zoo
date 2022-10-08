@@ -325,7 +325,6 @@
     width: 596px;
     height: 105px;
     padding: 15px 29px 8px 12px;
-    overflow: hidden;
     margin-right: 0;
     &::before {
       width: 596px;
@@ -336,11 +335,13 @@
       width: 600px;
       height: 109px;
     }
+    &__text {
+      margin-top: 12px;
+    }
     &_popap {
       display: flex;
       width: 267px;
       height: 391px;
-      overflow: visible;
       &::before {
         width: 263px;
         height: 387px;
@@ -395,7 +396,6 @@
       display: flex;
       width: 267px;
       height: 391px;
-      overflow: visible;
       &::before {
         width: 263px;
         height: 387px;

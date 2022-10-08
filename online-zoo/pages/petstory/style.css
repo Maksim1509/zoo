@@ -1994,7 +1994,6 @@ html {
     width: 596px;
     height: 105px;
     padding: 15px 29px 8px 12px;
-    overflow: hidden;
     margin-right: 0;
   }
   .testimonial:nth-child(1), .testimonial:nth-child(2), .testimonial:nth-child(3) {
@@ -2010,13 +2009,15 @@ html {
     width: 600px;
     height: 109px;
   }
+  .testimonial__text {
+    margin-top: 12px;
+  }
   .testimonial_popap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 267px;
     height: 391px;
-    overflow: visible;
   }
   .testimonial_popap::before {
     width: 263px;
@@ -2072,7 +2073,6 @@ html {
     display: flex;
     width: 267px;
     height: 391px;
-    overflow: visible;
   }
   .testimonial_popap::before {
     width: 263px;
