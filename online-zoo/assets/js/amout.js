@@ -14,9 +14,12 @@ export default () => {
     setTimeout(() => {
       const { value } = target;
       const dot = Array.from(dots).find((e) => e.value === value);
+      const curentDot = Array.from(dots).find((e) => e.checked);
       if(dot) {
         dot.checked = true;
+      } else if(curentDot) {
+        curentDot.checked = false;
       }
-    }, 1000);
+    }, 700);
   });
 };
