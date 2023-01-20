@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   return (
     <nav>
       <ul>
         <li>
-          <Link to={"/"}>Main</Link>
+          <Link to={'/'}>Main</Link>
         </li>
         <li>
-          <Link to={"/winners"}>Winners</Link>
+          <Link to={'/winners'}>Winners</Link>
         </li>
       </ul>
     </nav>
