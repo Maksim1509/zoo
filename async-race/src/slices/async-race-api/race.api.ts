@@ -10,7 +10,7 @@ export const raceApi = createApi({
   endpoints: (builder) => ({
     getCars: builder.query<ICar[], string>({
       query: () => '/garage',
-      providesTags: (res) => ['Cars'],
+      providesTags: () => ['Cars'],
     }),
     createCar: builder.mutation<ICar, ICar>({
       query: ({ ...data }) => ({
@@ -20,7 +20,27 @@ export const raceApi = createApi({
       }),
       invalidatesTags: ['Cars'],
     }),
+    updateCar: builder.mutation<ICar, ICar>({
+      query: ({ id, ...data }) => ({
+        url: `/garage/${id}`,
+        method: 'PUT',
+        body: data,
+      }),
+      invalidatesTags: ['Cars'],
+    }),
+    removeCar: builder.mutation<object, number>({
+      query: (id) => ({
+        url: `/garage/${id}`,
+        method: 'DELETE',
+      }),
+      invalidatesTags: ['Cars'],
+    }),
   }),
 });
 
-export const { useGetCarsQuery, useCreateCarMutation } = raceApi;
+export const {
+  useGetCarsQuery,
+  useCreateCarMutation,
+  useUpdateCarMutation,
+  useRemoveCarMutation,
+} = raceApi;

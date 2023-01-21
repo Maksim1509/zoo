@@ -5,10 +5,10 @@ import { ICar } from '../../../../types/types';
 const CreateCar = () => {
   const [name, setName] = useState('');
   const [color, setSetColor] = useState('');
-  const [createPost] = useCreateCarMutation();
+  const [createCar] = useCreateCarMutation();
   const createHandler = async (e: FormEvent) => {
     e.preventDefault();
-    await createPost({ color, name } as ICar);
+    await createCar({ color, name } as ICar);
     setName('');
   };
 
