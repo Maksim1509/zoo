@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { ICar } from '../../types/types';
+import { ICarPayload, ICar } from '../../types/types';
 
 export const raceApi = createApi({
   reducerPath: 'raceApi',
@@ -8,15 +8,15 @@ export const raceApi = createApi({
   }),
   tagTypes: ['Cars'],
   endpoints: (builder) => ({
-    getCars: builder.query<{ cars: ICar[]; pages: number }, number>({
+    getCars: builder.query<{ cars: ICar[]; count: number }, number>({
       query: (page) => `/garage/?_page=${page}&&_limit=7`,
       transformResponse: (response: ICar[], meta) => ({
         cars: response,
-        pages: Number(meta?.response?.headers.get('X-Total-Count')),
+        count: Number(meta?.response?.headers.get('X-Total-Count')),
       }),
       providesTags: () => ['Cars'],
     }),
-    createCar: builder.mutation<ICar, ICar>({
+    createCar: builder.mutation<ICar, ICarPayload>({
       query: ({ ...data }) => ({
         url: '/garage',
         method: 'POST',

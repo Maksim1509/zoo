@@ -1,6 +1,5 @@
 import { useState, FormEvent } from 'react';
 import { useCreateCarMutation } from '../../../../slices/async-race-api/race.api';
-import { ICar } from '../../../../types/types';
 
 const CreateCar = () => {
   const [name, setName] = useState('');
@@ -8,7 +7,7 @@ const CreateCar = () => {
   const [createCar] = useCreateCarMutation();
   const createHandler = async (e: FormEvent) => {
     e.preventDefault();
-    await createCar({ color, name } as ICar);
+    await createCar({ color, name });
     setName('');
   };
 

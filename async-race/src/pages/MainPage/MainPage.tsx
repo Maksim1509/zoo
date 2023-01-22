@@ -5,6 +5,7 @@ import { ICar } from '../../types/types';
 import CreateCar from './components/CreateCar/CreateCar';
 import './assets/style.css';
 import UpdateCar from './components/UpdateCar/UpdateCar';
+import GenerateCar from './components/GenerateCar/GenerateCar';
 
 const limit = 7;
 
@@ -18,7 +19,7 @@ const MainPage = () => {
   };
   const nextHandler = () => {
     if (data) {
-      const maxPage = Math.ceil(data.pages / limit);
+      const maxPage = Math.ceil(data.count / limit);
       const nextPage = page + 1 > maxPage ? maxPage : page + 1;
       setPage(nextPage);
     }
@@ -33,12 +34,13 @@ const MainPage = () => {
 
   return (
     <>
-      <h1>Main Page</h1>
+      <h1>Garage ({data && data.count})</h1>
       <span>Page#{page}</span>
       <CreateCar />
       <UpdateCar />
+      <GenerateCar />
       {isLoading && <p>Loading</p>}
-      <ol>{data && renderCarsList(data.cars)}</ol>
+      <ul>{data && renderCarsList(data.cars)}</ul>
       <section className='pagination'>
         <button onClick={prevHandler}>prev</button>
         <button onClick={nextHandler}>next</button>
