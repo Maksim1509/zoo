@@ -12,7 +12,7 @@ const limit = 7;
 const MainPage = () => {
   const [page, setPage] = useState(1);
   const { data, isLoading } = useGetCarsQuery(page);
-  console.log(data);
+
   const prevHandler = () => {
     const prevPage = page - 1 < 1 ? 1 : page - 1;
     setPage(prevPage);

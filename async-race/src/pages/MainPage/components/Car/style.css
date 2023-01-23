@@ -1,0 +1,16 @@
+.car {
+  position: relative;
+  height: 110px;
+  align-items: start;
+}
+
+.car h4 {
+  margin-bottom: 50px;
+}
+.car__icon {
+  display: flex;
+  position: absolute;
+  top: 22px;
+  margin-left: auto;
+  width: 48px;
+}

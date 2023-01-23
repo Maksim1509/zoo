@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { ICarPayload, ICar } from '../../types/types';
+import { ICarPayload, ICar, IRaceData } from '../../types/types';
 
 export const raceApi = createApi({
   reducerPath: 'raceApi',
@@ -39,6 +39,12 @@ export const raceApi = createApi({
       }),
       invalidatesTags: ['Cars'],
     }),
+    startRequest: builder.mutation<IRaceData, number>({
+      query: (id) => ({
+        url: `/engine/?id=${id}&&status=started`,
+        method: 'PATCH',
+      }),
+    }),
   }),
 });
 
@@ -47,4 +53,5 @@ export const {
   useCreateCarMutation,
   useUpdateCarMutation,
   useRemoveCarMutation,
+  useStartRequestMutation,
 } = raceApi;
