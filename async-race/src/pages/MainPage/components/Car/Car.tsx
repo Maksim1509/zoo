@@ -7,6 +7,7 @@ import { useAppDispatch } from '../../../../hooks/redux';
 import {
   useRemoveCarMutation,
   useStartRequestMutation,
+  useDriveREquestMutation,
 } from '../../../../slices/async-race-api/race.api';
 import './style.css';
 import useRequestAnimationFrame from 'use-request-animation-frame';
@@ -18,6 +19,7 @@ const Car = ({ id, name, color }: ICar) => {
   const dispatch = useAppDispatch();
   const [removeCar] = useRemoveCarMutation();
   const [startRequest] = useStartRequestMutation();
+  const [driveRequest, { isError }] = useDriveREquestMutation();
   const selectHandler = () => {
     dispatch(selectCar({ id, name, color }));
   };
@@ -51,11 +53,15 @@ const Car = ({ id, name, color }: ICar) => {
       setDuration(Number(duration.toFixed(2)));
       setDis(width);
       setShouldAnimate(true);
+      driveRequest(id)
+        .unwrap()
+        .catch((e: { originalStatus: number }) => {
+          if (e.originalStatus === 500) setShouldAnimate(false);
+        });
     } catch (e) {
       console.log(e);
     }
   };
-
   const stop = (id: number) => {
     console.log('stop');
     setShouldAnimate(false);

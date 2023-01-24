@@ -45,6 +45,12 @@ export const raceApi = createApi({
         method: 'PATCH',
       }),
     }),
+    driveREquest: builder.mutation<unknown, number>({
+      query: (id) => ({
+        url: `/engine/?id=${id}&&status=drive`,
+        method: 'PATCH',
+      }),
+    }),
   }),
 });
 
@@ -54,4 +60,5 @@ export const {
   useUpdateCarMutation,
   useRemoveCarMutation,
   useStartRequestMutation,
+  useDriveREquestMutation,
 } = raceApi;
