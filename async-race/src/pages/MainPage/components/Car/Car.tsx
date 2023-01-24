@@ -9,10 +9,12 @@ import {
   useStartRequestMutation,
 } from '../../../../slices/async-race-api/race.api';
 import './style.css';
+import useRequestAnimationFrame from 'use-request-animation-frame';
 
 const Car = ({ id, name, color }: ICar) => {
   const [dis, setDis] = useState(0);
-  const [duration, setDuration] = useState('0');
+  const [duration, setDuration] = useState(0);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
   const dispatch = useAppDispatch();
   const [removeCar] = useRemoveCarMutation();
   const [startRequest] = useStartRequestMutation();
@@ -21,25 +23,34 @@ const Car = ({ id, name, color }: ICar) => {
   };
   const containerRef = useRef<HTMLElement>(null);
   const carRef = useRef<HTMLDivElement>(null);
-  const width = containerRef.current?.getBoundingClientRect().width as number;
-  useEffect(() => {
-    const car = carRef.current as HTMLDivElement;
-    car.style.transform = `translateX(${Math.floor(dis)}px)`;
-    console.log(width);
-    car.style.transitionDuration = `${duration}s`;
-  }, [duration, dis, width]);
+
+  // 100 - 1300;
+  // 3 - x;
+
+  const nextAnimationFrameHandler = (progress: number) => {
+    if (carRef.current) {
+      const value = dis * progress;
+      carRef.current.style.left = value + 'px';
+    }
+  };
+
+  useRequestAnimationFrame(nextAnimationFrameHandler, {
+    duration,
+    shouldAnimate,
+  });
 
   const removeHandler = () => {
     removeCar(id);
   };
 
   const start = async (id: number) => {
+    const width = containerRef.current?.getBoundingClientRect().width as number;
     try {
       const data = await startRequest(id).unwrap();
-
       const duration = data.distance / data.velocity;
-      setDuration((duration / 1000).toFixed(2));
+      setDuration(Number(duration.toFixed(2)));
       setDis(width);
+      setShouldAnimate(true);
     } catch (e) {
       console.log(e);
     }
@@ -47,7 +58,7 @@ const Car = ({ id, name, color }: ICar) => {
 
   const stop = (id: number) => {
     console.log('stop');
-    // car.style.transform = `translateX(0)`;
+    setShouldAnimate(false);
   };
   return (
     <section ref={containerRef} className='car' id={String(id)}>
