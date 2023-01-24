@@ -68,6 +68,9 @@ const Car = ({ id, name, color }: ICar) => {
   const stop = async (id: number) => {
     await startStopRequest({ id, status: 'stopped' });
     setShouldAnimate(false);
+    if (carRef.current) {
+      carRef.current.style.left = '0px';
+    }
   };
   return (
     <section ref={containerRef} className='car' id={String(id)}>
