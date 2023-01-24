@@ -1,8 +1,8 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { HandySvg } from 'handy-svg';
 import carIcon from '../../assets/car-icon.svg';
 import { selectCar } from '../../../../slices/selectCarSlice/selectCarSlice';
-import { ICar, IRaceData } from '../../../../types/types';
+import { ICar } from '../../../../types/types';
 import { useAppDispatch } from '../../../../hooks/redux';
 import {
   useRemoveCarMutation,
