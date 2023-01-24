@@ -6,7 +6,7 @@ import { ICar, IRaceData } from '../../../../types/types';
 import { useAppDispatch } from '../../../../hooks/redux';
 import {
   useRemoveCarMutation,
-  useStartRequestMutation,
+  useStartStopRequestMutation,
   useDriveREquestMutation,
 } from '../../../../slices/async-race-api/race.api';
 import './style.css';
@@ -18,7 +18,7 @@ const Car = ({ id, name, color }: ICar) => {
   const [shouldAnimate, setShouldAnimate] = useState(false);
   const dispatch = useAppDispatch();
   const [removeCar] = useRemoveCarMutation();
-  const [startRequest] = useStartRequestMutation();
+  const [startStopRequest] = useStartStopRequestMutation();
   const [driveRequest, { isError }] = useDriveREquestMutation();
   const selectHandler = () => {
     dispatch(selectCar({ id, name, color }));
@@ -48,22 +48,25 @@ const Car = ({ id, name, color }: ICar) => {
   const start = async (id: number) => {
     const width = containerRef.current?.getBoundingClientRect().width as number;
     try {
-      const data = await startRequest(id).unwrap();
+      const data = await startStopRequest({ id, status: 'started' }).unwrap();
       const duration = data.distance / data.velocity;
       setDuration(Number(duration.toFixed(2)));
       setDis(width);
       setShouldAnimate(true);
       driveRequest(id)
         .unwrap()
-        .catch((e: { originalStatus: number }) => {
-          if (e.originalStatus === 500) setShouldAnimate(false);
+        .catch(async (e: { originalStatus: number }) => {
+          if (e.originalStatus === 500) {
+            setShouldAnimate(false);
+            await startStopRequest({ id, status: 'stopped' });
+          }
         });
     } catch (e) {
       console.log(e);
     }
   };
-  const stop = (id: number) => {
-    console.log('stop');
+  const stop = async (id: number) => {
+    await startStopRequest({ id, status: 'stopped' });
     setShouldAnimate(false);
   };
   return (

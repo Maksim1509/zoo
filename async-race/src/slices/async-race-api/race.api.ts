@@ -39,9 +39,12 @@ export const raceApi = createApi({
       }),
       invalidatesTags: ['Cars'],
     }),
-    startRequest: builder.mutation<IRaceData, number>({
-      query: (id) => ({
-        url: `/engine/?id=${id}&&status=started`,
+    startStopRequest: builder.mutation<
+      IRaceData,
+      { id: number; status: string }
+    >({
+      query: ({ id, status }) => ({
+        url: `/engine/?id=${id}&&status=${status}`,
         method: 'PATCH',
       }),
     }),
@@ -59,6 +62,6 @@ export const {
   useCreateCarMutation,
   useUpdateCarMutation,
   useRemoveCarMutation,
-  useStartRequestMutation,
+  useStartStopRequestMutation,
   useDriveREquestMutation,
 } = raceApi;
