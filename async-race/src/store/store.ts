@@ -1,8 +1,10 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import { raceApi } from '../slices/async-race-api/race.api';
 import selectCar from '../slices/selectCarSlice/selectCarSlice';
+import pagination from '../slices/paginationSlice/paginationSlice';
 
 const rootReducer = combineReducers({
+  pagination,
   selectCar,
   [raceApi.reducerPath]: raceApi.reducer,
 });
