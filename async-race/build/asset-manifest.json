@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/maksim1509-JSFE2022Q3/static/css/main.c2573027.css",
+    "main.js": "/maksim1509-JSFE2022Q3/static/js/main.9d5bf102.js",
+    "static/media/car-icon.svg": "/maksim1509-JSFE2022Q3/static/media/car-icon.994b09a3f9ba7f44c54945082ed9c055.svg",
+    "index.html": "/maksim1509-JSFE2022Q3/index.html",
+    "main.c2573027.css.map": "/maksim1509-JSFE2022Q3/static/css/main.c2573027.css.map",
+    "main.9d5bf102.js.map": "/maksim1509-JSFE2022Q3/static/js/main.9d5bf102.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c2573027.css",
+    "static/js/main.9d5bf102.js"
+  ]
+}
