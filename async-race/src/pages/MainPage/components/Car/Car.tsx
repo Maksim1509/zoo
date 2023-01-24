@@ -13,13 +13,14 @@ import './style.css';
 import useRequestAnimationFrame from 'use-request-animation-frame';
 
 const Car = ({ id, name, color }: ICar) => {
+  const [disabled, setDisabled] = useState({ start: false, stop: true });
   const [dis, setDis] = useState(0);
   const [duration, setDuration] = useState(0);
   const [shouldAnimate, setShouldAnimate] = useState(false);
   const dispatch = useAppDispatch();
   const [removeCar] = useRemoveCarMutation();
   const [startStopRequest] = useStartStopRequestMutation();
-  const [driveRequest, { isError }] = useDriveREquestMutation();
+  const [driveRequest] = useDriveREquestMutation();
   const selectHandler = () => {
     dispatch(selectCar({ id, name, color }));
   };
@@ -53,12 +54,14 @@ const Car = ({ id, name, color }: ICar) => {
       setDuration(Number(duration.toFixed(2)));
       setDis(width);
       setShouldAnimate(true);
+      setDisabled({ start: true, stop: false });
       driveRequest(id)
         .unwrap()
         .catch(async (e: { originalStatus: number }) => {
           if (e.originalStatus === 500) {
             setShouldAnimate(false);
             await startStopRequest({ id, status: 'stopped' });
+            setDisabled({ start: true, stop: false });
           }
         });
     } catch (e) {
@@ -71,6 +74,7 @@ const Car = ({ id, name, color }: ICar) => {
     if (carRef.current) {
       carRef.current.style.left = '0px';
     }
+    setDisabled({ start: false, stop: true });
   };
   return (
     <section ref={containerRef} className='car' id={String(id)}>
@@ -78,8 +82,12 @@ const Car = ({ id, name, color }: ICar) => {
       <div ref={carRef} className={'car__icon'}>
         <HandySvg src={carIcon} fill={color} width='48' height='48' />
       </div>
-      <button onClick={() => start(id)}>A</button>
-      <button onClick={() => stop(id)}>B</button>
+      <button onClick={() => start(id)} disabled={disabled.start}>
+        A
+      </button>
+      <button onClick={() => stop(id)} disabled={disabled.stop}>
+        B
+      </button>
       <button onClick={selectHandler}>Select</button>
       <button onClick={removeHandler}>Remove</button>
     </section>
