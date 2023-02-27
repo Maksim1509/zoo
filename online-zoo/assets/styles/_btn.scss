@@ -1,0 +1,77 @@
+.btn {
+  position: relative;
+  z-index: 1;
+  max-width: 298px;
+  width: 298px;
+  height: 54px;
+  padding: 0;
+  font: {
+    family: 'Roboto';
+    style: normal;
+    weight: 400;
+    size: 16px;
+  }
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  border-radius: 25px;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    width: 298px;
+    height: 54px;
+    border-radius: inherit;
+    border: none;
+    background: #E47209;
+    transition: opacity 0.3s;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    width: 298px;
+    height: 54px;
+    border-radius: inherit;
+    border: none;
+    transition: opacity 0.3s;
+    background: #4B9200;
+  }
+  &:active::after {
+    opacity: 1;
+  }
+  &_disabled {
+    background: #767474;
+  }
+  &_square {
+    border-radius: 5px;
+  } 
+}
+
+.btn-submit {
+  width: 129px;
+  height: 42px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  background: #F1F3F2;
+
+  border: 1px solid #333B41;
+  border-radius: 5px;
+  cursor: pointer;
+}

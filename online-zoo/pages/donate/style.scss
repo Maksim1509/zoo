@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-family: 'Roboto';
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  &-content {
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+    @media screen and (max-width: 1599px) {
+      padding: 0 3%;
+    }
+    @media screen and (max-width: 1279px) {
+      max-width: none;
+    }
+  }
+}
+
+
+@import '../../assets/styles/vars';
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/_fonts.scss';
+@import '../../assets/styles/_btn.scss';
+@import '../../assets/styles/_header.scss';
+@import '../../assets/styles/_logo.scss';
+@import '../../assets/styles/footer';
+@import './styles/_panda.scss';
+@import './styles/_donate.scss';
+@import '../../assets/styles/_blur.scss';
+
+
+.test {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+  color: #000000;
+}

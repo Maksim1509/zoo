@@ -1,0 +1,133 @@
+.backstage {
+  position: relative;
+  padding-top: 140px;
+  width: 100%;
+
+  &__content {
+    display: flex;
+    column-gap: 87px;
+  }
+  &__content {
+    color: #333B41;
+  }
+  &__img {
+    width: 609px;
+    height: 403px;
+    background: url(../../assets/images/cap.jpg) 0 0 no-repeat;
+    flex-shrink: 0;
+  }
+  &__title {
+    margin: 0 0 20px;
+    @include h2;
+  }
+  &__subtitle {
+    margin: 54px 0 34px;
+    @include subtitle;
+  }
+  &__paragraph {
+    margin: 0;
+    font: {
+      family: 'Roboto';
+      style: normal;
+      weight: 400;
+      size: 16px;
+    }
+    line-height: 21px;
+  }
+  &__flower {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 200px;
+    height: 605px;
+    background-image: url(../../assets/images/flower.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+}
+
+@media screen and (max-width: 1599px) {
+  .backstage {
+    padding-top: 100px;
+    &__content {
+      align-items: center;
+      max-width: none;
+      column-gap: 3.1%;
+    }
+    &__img {
+      width: 455px;
+      height: 408px;
+      background: url(../../assets/images/cap_small.jpg) 0 0 no-repeat;
+    }
+    &__paragraph {
+      padding-right: 2px;
+    }
+    &__flower {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .backstage {
+    padding-top: 58px;
+    &__content {
+      padding: 0 20px;
+    }
+    &__title {
+      padding-left: 2px;
+    }
+    &__subtitle {
+      margin: 30px 0 20px;
+      padding-left: 2px;
+    }
+    &__text {
+      max-width: 82.5%;
+    }
+    &__img {
+      display: none;
+    }
+    &__flower {
+      top: 0;
+      display: block;
+      width: 131.5px;
+      height: 476px;
+      background: url(../../assets/images/flower_tablet.png) 0 -6px no-repeat;
+    }
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .backstage {
+    padding-top: 104px;
+    &__content {
+      padding: 0 10px;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 10px;
+      padding-left: 0px;
+    }
+    &__subtitle {
+      margin: 20px 0 10px;
+      padding-left: 2px;
+    }
+    &__text {
+        max-width: none;
+     }
+    &__title {
+      & + p {
+        max-width: 95.21%;
+       }
+      max-width: 95.21%;
+     }
+    &__flower {
+      top: 0;
+      width: 105px;
+      height: 230px;
+      background: url(../../assets/images/flower_mobile.png) 99% 39px no-repeat;
+    }
+  }
+}

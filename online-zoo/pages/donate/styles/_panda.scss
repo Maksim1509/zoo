@@ -1,0 +1,34 @@
+.panda {
+  margin-top: 80px;
+  width: 100%;
+  height: 390px;
+  background: url(../../assets/images/panda_bg.jpg);
+  background-size: cover;
+}
+
+@media screen and (max-width: 1599px) {
+  .panda {
+    height: 395px;
+    width: auto;
+    margin-top: 80px;
+    background-position: -184px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .panda {
+    height: 340px;
+    width: auto;
+    margin-top: 34px;
+    background-position: -282px -2px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .panda {
+    height: 191px;
+    margin-top: 35px;
+    background: url(../../assets/images/panda_bg_mobile.jpg) no-repeat;
+    background-size: cover;
+  }
+}

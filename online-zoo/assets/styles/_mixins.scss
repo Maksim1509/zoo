@@ -1,0 +1,19 @@
+@mixin h2 {
+  font: {
+    family: 'Roboto';
+    style: normal;
+    weight: 400;
+    size: 48px;
+  }
+  line-height: 58px;
+}
+
+@mixin subtitle {
+  font: {
+    family: 'Roboto';
+    style: normal;
+    weight: 400;
+    size: 24px;
+  }
+  line-height: 29px;
+}

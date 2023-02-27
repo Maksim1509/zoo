@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-family: 'Roboto';
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  &-content {
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+    
+    @media screen and (max-width: 1599px) {
+      padding: 0 3%;
+    }
+    @media screen and (max-width: 1279px) {
+      max-width: none;
+    }
+  }
+}
+
+@import '../../assets/styles/vars';
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/_fonts.scss';
+@import '../../assets/styles/_header.scss';
+@import '../../assets/styles/_logo.scss';
+@import './styles/_watch.scss';
+@import '../../assets/styles/_btn.scss';
+@import './styles/_backstage.scss';
+@import './styles/_pets.scss';
+@import './styles/_pick.scss';
+@import './styles/_testimonials.scss';
+@import '../../assets/styles/footer';
+@import '../../assets/styles/_blur.scss';
